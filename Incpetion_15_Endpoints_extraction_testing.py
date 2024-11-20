@@ -3,6 +3,15 @@ import requests
 from dotenv import load_dotenv
 from pprint import pprint
 import time
+import sys
+from datetime import datetime
+
+# Creating filename with timestamp
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+output_file = f"inception_data_{timestamp}.txt"
+
+# stdout to file
+sys.stdout = open(output_file, "w", encoding='utf-8')
 
 # Load environment variables
 load_dotenv()
