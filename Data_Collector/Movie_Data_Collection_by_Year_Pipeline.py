@@ -31,15 +31,23 @@ class TMDBApiClient:
             return {}
     
     def get_endpoints(self, movie_id: int) -> Dict[str, str]:
-        """ TMDB endpoints for a movie data """
-        
+        """ TMDB endpoints for movie data """
         return {
             "details": f"/movie/{movie_id}",
-            "credits": f"/movie/{movie_id}/credits",
+            "credits": f"/movie/{movie_id}/credits", 
             "keywords": f"/movie/{movie_id}/keywords",
             "reviews": f"/movie/{movie_id}/reviews",
             "similar": f"/movie/{movie_id}/similar",
-            "recommendations": f"/movie/{movie_id}/recommendations"
+            "recommendations": f"/movie/{movie_id}/recommendations",
+            "videos": f"/movie/{movie_id}/videos",
+            "images": f"/movie/{movie_id}/images",
+            "watch_providers": f"/movie/{movie_id}/watch/providers",
+            "release_dates": f"/movie/{movie_id}/release_dates",
+            "translations": f"/movie/{movie_id}/translations", 
+            "alternative_titles": f"/movie/{movie_id}/alternative_titles",
+            "lists": f"/movie/{movie_id}/lists",
+            "external_ids": f"/movie/{movie_id}/external_ids",
+            "changes": f"/movie/{movie_id}/changes"
         }
 
 client = TMDBApiClient(api_key)
