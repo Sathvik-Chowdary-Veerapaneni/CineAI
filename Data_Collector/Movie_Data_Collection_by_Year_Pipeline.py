@@ -8,7 +8,7 @@ load_dotenv()
 api_key = os.getenv('TMDB_BEARER_TOKEN')
 
 class TMDBApiClient:
-    """Managing TMDB API interactions and request handling"""
+    """ Managing TMDB API interactions and requests """
     
     def __init__(self, api_key: str):
         self.base_url = "https://api.themoviedb.org/3"
@@ -19,7 +19,7 @@ class TMDBApiClient:
         self.rate_limit_wait = 0.25
 
     def make_request(self, endpoint: str, params: Optional[Dict] = None) -> Dict:
-        """Making API requests with rate limiting and error handling"""
+        """ Making API requests with rate limiting and error handling """
         url = f"{self.base_url}{endpoint}"
         try:
             time.sleep(self.rate_limit_wait)
@@ -29,15 +29,17 @@ class TMDBApiClient:
         except Exception as e:
             print(f"Error fetching {endpoint}: {str(e)}")
             return {}
+    
+    def get_endpoints(self, movie_id: int) -> Dict[str, str]:
+        """ TMDB endpoints for a movie data """
+        
+        return {
+            "details": f"/movie/{movie_id}",
+            "credits": f"/movie/{movie_id}/credits",
+            "keywords": f"/movie/{movie_id}/keywords",
+            "reviews": f"/movie/{movie_id}/reviews",
+            "similar": f"/movie/{movie_id}/similar",
+            "recommendations": f"/movie/{movie_id}/recommendations"
+        }
 
 client = TMDBApiClient(api_key)
-
-# Testing the client
-if __name__ == "__main__":
-    # Test initialization
-    print("Base URL:", client.base_url)
-    print("Headers:", client.headers)
-    
-    # Test API call with Inception movie ID
-    response = client.make_request("/movie/27205")
-    print("\nTest movie title:", response.get('title'))
