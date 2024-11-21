@@ -1,3 +1,9 @@
 venv
 .env
 .vscode
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+Data_Collector/__pycache__
