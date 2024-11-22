@@ -1,0 +1,194 @@
+{
+  "results": [
+    {
+      "id": 988078,
+      "title": "Through My Window: Across the Sea",
+      "popularity": 81.124,
+      "genre_ids": [
+        10749,
+        18,
+        35
+      ]
+    },
+    {
+      "id": 1016121,
+      "title": "Beautiful Disaster",
+      "popularity": 45.108,
+      "genre_ids": [
+        10749,
+        18,
+        35
+      ]
+    },
+    {
+      "id": 1127166,
+      "title": "The Tearsmith",
+      "popularity": 78.106,
+      "genre_ids": [
+        10749,
+        18
+      ]
+    },
+    {
+      "id": 961420,
+      "title": "Kingdom 2: Far and Away",
+      "popularity": 18.35,
+      "genre_ids": [
+        28,
+        12,
+        10752
+      ]
+    },
+    {
+      "id": 930094,
+      "title": "Red, White & Royal Blue",
+      "popularity": 60.846,
+      "genre_ids": [
+        35,
+        10749
+      ]
+    },
+    {
+      "id": 697843,
+      "title": "Extraction 2",
+      "popularity": 75.202,
+      "genre_ids": [
+        28,
+        53
+      ]
+    },
+    {
+      "id": 845659,
+      "title": "Perfect Addiction",
+      "popularity": 39.743,
+      "genre_ids": [
+        18,
+        10749
+      ]
+    },
+    {
+      "id": 1006911,
+      "title": "Make Me Believe",
+      "popularity": 20.131,
+      "genre_ids": [
+        10749,
+        35
+      ]
+    },
+    {
+      "id": 912916,
+      "title": "The Other Zoey",
+      "popularity": 41.367,
+      "genre_ids": [
+        10749,
+        18,
+        35
+      ]
+    },
+    {
+      "id": 1209450,
+      "title": "National Family",
+      "popularity": 8.513,
+      "genre_ids": [
+        35,
+        28
+      ]
+    },
+    {
+      "id": 447277,
+      "title": "The Little Mermaid",
+      "popularity": 114.122,
+      "genre_ids": [
+        12,
+        10751,
+        14,
+        10749
+      ]
+    },
+    {
+      "id": 818647,
+      "title": "Through My Window",
+      "popularity": 72.791,
+      "genre_ids": [
+        10749,
+        18,
+        35
+      ]
+    },
+    {
+      "id": 763148,
+      "title": "Time Is Up",
+      "popularity": 20.975,
+      "genre_ids": [
+        10749,
+        18
+      ]
+    },
+    {
+      "id": 1119173,
+      "title": "A Beautiful Life",
+      "popularity": 16.734,
+      "genre_ids": [
+        18,
+        10402,
+        10749
+      ]
+    },
+    {
+      "id": 758336,
+      "title": "Love Again",
+      "popularity": 24.842,
+      "genre_ids": [
+        10749,
+        18,
+        35
+      ]
+    },
+    {
+      "id": 1181511,
+      "title": "The Benetón Family",
+      "popularity": 10.014,
+      "genre_ids": [
+        35,
+        10751
+      ]
+    },
+    {
+      "id": 1014590,
+      "title": "Upgraded",
+      "popularity": 70.615,
+      "genre_ids": [
+        10749,
+        35
+      ]
+    },
+    {
+      "id": 984324,
+      "title": "The Wages of Fear",
+      "popularity": 74.291,
+      "genre_ids": [
+        28
+      ]
+    },
+    {
+      "id": 385687,
+      "title": "Fast X",
+      "popularity": 215.075,
+      "genre_ids": [
+        28,
+        80,
+        53
+      ]
+    },
+    {
+      "id": 818750,
+      "title": "The In Between",
+      "popularity": 27.319,
+      "genre_ids": [
+        10749,
+        878,
+        18
+      ]
+    }
+  ]
+}

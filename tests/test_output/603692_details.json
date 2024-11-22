@@ -1,0 +1,18 @@
+{
+  "adult": false,
+  "genres": [
+    {
+      "name": "Action"
+    },
+    {
+      "name": "Thriller"
+    },
+    {
+      "name": "Crime"
+    }
+  ],
+  "original_title": "John Wick: Chapter 4",
+  "original_language": "en",
+  "popularity": 366.538,
+  "release_date": "2023-03-22"
+}

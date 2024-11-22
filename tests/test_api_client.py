@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Data_Collector'))
-from Movie_Data_Collection_by_Year_Pipeline import TMDBApiClient
+from Data_Collector.Movie_Data_Collection_by_Year_Pipeline import TMDBApiClient
 
 # variables setup
 load_dotenv()
