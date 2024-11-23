@@ -3,3 +3,13 @@
 2024-11-23 13:53:36,420 - INFO - Saved batch 1 with 1000 movies.
 2024-11-23 13:56:26,500 - INFO - Saved batch 2 with 1000 movies.
 2024-11-23 13:59:42,931 - INFO - Saved batch 3 with 1000 movies.
+2024-11-23 14:03:05,512 - INFO - Saved batch 4 with 1000 movies.
+2024-11-23 14:06:32,089 - INFO - Saved batch 5 with 1000 movies.
+2024-11-23 14:10:22,630 - INFO - Saved batch 6 with 1000 movies.
+2024-11-23 14:13:37,883 - INFO - Saved batch 7 with 1000 movies.
+2024-11-23 14:16:52,627 - INFO - Saved batch 8 with 1000 movies.
+2024-11-23 14:20:15,580 - INFO - Saved batch 9 with 1000 movies.
+2024-11-23 14:21:42,307 - ERROR - Error fetching /movie/1198594/credits: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/1198594/credits
+2024-11-23 14:21:43,088 - ERROR - Error fetching /movie/1198594/watch/providers: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/1198594/watch/providers
+2024-11-23 14:23:38,467 - INFO - Saved batch 10 with 1000 movies.
+2024-11-23 14:23:38,985 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2023&page=501&sort_by=popularity.desc
