@@ -3,7 +3,15 @@ import os
 import requests
 import time
 import json
-from typing import Dict, Optional, Any
+from typing import Dict, Optional
+import threading
+from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 api_key = os.getenv('TMDB_BEARER_TOKEN')
@@ -20,18 +28,28 @@ class TMDBApiClient:
             "accept": "application/json",
             "Authorization": f"Bearer {api_key}"
         }
-        self.rate_limit_wait = 0.26  # Adjust according to API's rate limits
+        self.rate_limit_wait = 0.26  
+        self.session = requests.Session()
+        retries = requests.adapters.Retry(
+            total=5,
+            backoff_factor=1,
+            status_forcelist=[429, 500, 502, 503, 504],
+            method_whitelist=["HEAD", "GET", "OPTIONS"]
+        )
+        adapter = requests.adapters.HTTPAdapter(max_retries=retries)
+        self.session.mount('https://', adapter)
+        self.session.mount('http://', adapter)
 
     def make_request(self, endpoint: str, params: Optional[Dict] = None) -> Dict:
         """Makes API requests with rate limiting and error handling."""
         url = f"{self.base_url}{endpoint}"
         try:
             time.sleep(self.rate_limit_wait)
-            response = requests.get(url, headers=self.headers, params=params)
+            response = self.session.get(url, headers=self.headers, params=params)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as e:
-            print(f"Error fetching {endpoint}: {e}")
+            logger.error(f"Error fetching {endpoint}: {e}")
             return {}
 
     def get_endpoints(self, movie_id: int) -> Dict[str, str]:
@@ -69,42 +87,73 @@ class MovieDataCollector:
         Args:
             batch_size (int): Number of movies per batch file. Defaults to 1000.
         """
+        # Fetch the first page to get total_pages
+        params = {
+            "language": "en-US",
+            "primary_release_year": self.year,
+            "page": 1,
+            "sort_by": "popularity.desc"
+        }
+        data = self.api_client.make_request("/discover/movie", params)
+        total_pages = data.get('total_pages', 1)
         page = 1
         batch_number = 1
         batch_data = []
+        batches_to_filter = []
 
-        while True:
-            params = {
-                "language": "en-US",
-                "primary_release_year": self.year,
-                "page": page,
-                "sort_by": "popularity.desc"
-            }
-            data = self.api_client.make_request("/discover/movie", params)
-            results = data.get('results', [])
-            if not results:
-                break
-            for movie in results:
-                movie_id = movie.get('id')
-                if not movie_id:
-                    continue
-                endpoints = self.api_client.get_endpoints(movie_id)
-                movie_data = {}
-                for endpoint_name, endpoint in endpoints.items():
-                    endpoint_data = self.api_client.make_request(endpoint)
-                    movie_data[endpoint_name] = endpoint_data
-                batch_data.append({movie_id: movie_data})
-                if len(batch_data) >= batch_size:
-                    self.save_batch_data(batch_number, batch_data)
-                    batch_data = []
-                    batch_number += 1
-            page += 1
+        # Use tqdm for the progress bar
+        with tqdm(total=total_pages, desc="Fetching movies") as pbar:
+            while page <= total_pages:
+                params['page'] = page
+                data = self.api_client.make_request("/discover/movie", params)
+                results = data.get('results', [])
+                if not results:
+                    break
 
-        # Save any remaining movies in the last batch
+                # Use ThreadPoolExecutor to fetch movie data concurrently
+                with ThreadPoolExecutor(max_workers=10) as executor:
+                    future_to_movie = {
+                        executor.submit(self.fetch_movie_data, movie): movie for movie in results
+                    }
+                    for future in as_completed(future_to_movie):
+                        movie_data = future.result()
+                        if movie_data:
+                            batch_data.append(movie_data)
+                            if len(batch_data) >= batch_size:
+                                batch_file_name = self.save_batch_data(batch_number, batch_data)
+                                batches_to_filter.append(batch_file_name)
+                                batch_data = []
+                                batch_number += 1
+
+                                # Trigger filtering after every 2 batches
+                                if len(batches_to_filter) >= 2:
+                                    self.trigger_filtering(batches_to_filter.copy())
+                                    batches_to_filter.clear()
+
+                page += 1
+                pbar.update(1)  # Update progress bar
+
+        # Save any remaining movies
         if batch_data:
-            self.save_batch_data(batch_number, batch_data)
+            batch_file_name = self.save_batch_data(batch_number, batch_data)
+            batches_to_filter.append(batch_file_name)
 
-    def save_batch_data(self, batch_number: int, batch_data: list):
+        # Trigger filtering for any remaining batches
+        if batches_to_filter:
+            self.trigger_filtering(batches_to_filter.copy())
+
+    def fetch_movie_data(self, movie):
+        movie_id = movie.get('id')
+        if not movie_id:
+            return None
+        endpoints = self.api_client.get_endpoints(movie_id)
+        movie_data = {}
+        for endpoint_name, endpoint in endpoints.items():
+            endpoint_data = self.api_client.make_request(endpoint)
+            movie_data[endpoint_name] = endpoint_data
+        return {movie_id: movie_data}
+
+    def save_batch_data(self, batch_number: int, batch_data: list) -> str:
         """
         Saves a batch of movie data to a JSON file named batch_{batch_number:03d}.json.
 
@@ -116,6 +165,21 @@ class MovieDataCollector:
         output_file_path = os.path.join(self.output_dir, output_file_name)
         with open(output_file_path, 'w', encoding='utf-8') as f:
             json.dump(batch_data, f, indent=2, ensure_ascii=False)
+        logger.info(f"Saved batch {batch_number} with {len(batch_data)} movies.")
+        return output_file_name  # Return the file name for filtering
+
+    def trigger_filtering(self, batch_file_names):
+        filter_thread = threading.Thread(target=run_filtering, args=(batch_file_names,))
+        filter_thread.start()
+
+def run_filtering(batch_file_names):
+    from filter_movie_data import DataFilter  # Import the filtering module
+
+    input_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "movie_data", str(2023))
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "filtered_data", str(2023))
+
+    data_filter = DataFilter(input_dir, output_dir)
+    data_filter.process_batch_files(batch_file_names)
 
 if __name__ == "__main__":
     # Instantiate the API client and data collector
@@ -124,6 +188,6 @@ if __name__ == "__main__":
 
     try:
         # Collect and save movie data
-        collector.get_sample_movies_by_year(limit=1000)
+        collector.get_movies_by_year_batch(batch_size=1000)
     except Exception as e:
-        print(f"An error occurred during data collection: {e}")
+        logger.error(f"An error occurred during data collection: {e}")
