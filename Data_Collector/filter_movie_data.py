@@ -30,21 +30,28 @@ class DataFilter:
                 ]
             },
             "watch_providers": {
-                "results": {}
+                "results": {
+                    "US": {}  # Include all data under 'US'
+                }
             }
         }
         return fields_to_retain.get(endpoint_name)
 
     def filter_fields(self, data: Any, fields: Any) -> Any:
-        # Filtering logic
-        if isinstance(fields, set) and isinstance(data, dict):
+        if fields is None:
+            return data
+        elif isinstance(fields, set) and isinstance(data, dict):
             return {key: data[key] for key in fields if key in data}
         elif isinstance(fields, dict) and isinstance(data, dict):
+            if not fields:  # Include all data if fields dict is empty
+                return data
             return {
                 key: self.filter_fields(data.get(key, {}), sub_fields)
                 for key, sub_fields in fields.items() if key in data
             }
         elif isinstance(fields, list) and isinstance(data, list):
+            if not fields:  # Include all items if fields list is empty
+                return data
             return [
                 self.filter_fields(item, fields[0]) for item in data
             ]
@@ -55,7 +62,7 @@ class DataFilter:
         filtered_movie_data = {}
         for endpoint_name, endpoint_data in movie_data.items():
             fields = self.get_fields_to_retain(endpoint_name)
-            if fields:
+            if fields is not None:
                 filtered_data = self.filter_fields(endpoint_data, fields)
                 filtered_movie_data[endpoint_name] = filtered_data
             else:
@@ -79,8 +86,10 @@ class DataFilter:
             json.dump(filtered_batch_data, f, indent=2, ensure_ascii=False)
 
     def process_batch_files(self, batch_file_names):
-        for batch_file_name in tqdm(batch_file_names, desc="Filtering batches"):
+        for batch_file_name in tqdm(batch_file_names, desc="Filtering batches", ncols=80, dynamic_ncols=True):
             self.process_batch_file(batch_file_name)
+            # Use tqdm.write to indicate progress
+            tqdm.write(f"Filtered {batch_file_name}")
 
 if __name__ == "__main__":
     import sys

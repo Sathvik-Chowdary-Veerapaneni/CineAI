@@ -8,9 +8,15 @@ import threading
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
+import sys
 
-# Set up logging
-logging.basicConfig(level=logging.INFO)
+# Set up logging to a file to avoid interfering with tqdm
+logging.basicConfig(
+    level=logging.INFO,
+    filename='data_collection.log',
+    filemode='a',
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger(__name__)
 
 load_dotenv()
@@ -28,13 +34,15 @@ class TMDBApiClient:
             "accept": "application/json",
             "Authorization": f"Bearer {api_key}"
         }
-        self.rate_limit_wait = 0.26  
+        self.rate_limit_wait = 0.26  # Adjust according to API's rate limits
         self.session = requests.Session()
-        retries = requests.adapters.Retry(
+        from urllib3.util.retry import Retry  # Import Retry here
+
+        retries = Retry(
             total=5,
             backoff_factor=1,
             status_forcelist=[429, 500, 502, 503, 504],
-            method_whitelist=["HEAD", "GET", "OPTIONS"]
+            allowed_methods=["HEAD", "GET", "OPTIONS"]
         )
         adapter = requests.adapters.HTTPAdapter(max_retries=retries)
         self.session.mount('https://', adapter)
@@ -49,6 +57,7 @@ class TMDBApiClient:
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as e:
+            # Log errors to the log file
             logger.error(f"Error fetching {endpoint}: {e}")
             return {}
 
@@ -102,7 +111,7 @@ class MovieDataCollector:
         batches_to_filter = []
 
         # Use tqdm for the progress bar
-        with tqdm(total=total_pages, desc="Fetching movies") as pbar:
+        with tqdm(total=total_pages, desc="Fetching movies", ncols=80, dynamic_ncols=True) as pbar:
             while page <= total_pages:
                 params['page'] = page
                 data = self.api_client.make_request("/discover/movie", params)
@@ -165,6 +174,9 @@ class MovieDataCollector:
         output_file_path = os.path.join(self.output_dir, output_file_name)
         with open(output_file_path, 'w', encoding='utf-8') as f:
             json.dump(batch_data, f, indent=2, ensure_ascii=False)
+        # Use tqdm.write to print without disrupting the progress bar
+        tqdm.write(f"Saved batch {batch_number} with {len(batch_data)} movies.")
+        # Also log the event
         logger.info(f"Saved batch {batch_number} with {len(batch_data)} movies.")
         return output_file_name  # Return the file name for filtering
 
@@ -191,3 +203,5 @@ if __name__ == "__main__":
         collector.get_movies_by_year_batch(batch_size=1000)
     except Exception as e:
         logger.error(f"An error occurred during data collection: {e}")
+        # Use tqdm.write to print the error without disrupting the progress bar
+        tqdm.write(f"An error occurred during data collection: {e}")
