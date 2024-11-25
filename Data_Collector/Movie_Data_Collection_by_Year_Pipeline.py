@@ -3,7 +3,7 @@ import os
 import requests
 import time
 import json
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 import threading
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -73,13 +73,13 @@ class TMDBApiClient:
 class MovieDataCollector:
     """Collects movie data using TMDBApiClient."""
 
-    def __init__(self, api_client: TMDBApiClient, year: int = 2023, output_dir: Optional[str] = None):
+    def __init__(self, api_client: TMDBApiClient, year: int, output_dir: Optional[str] = None):
         """
         Initializes the MovieDataCollector.
 
         Args:
             api_client (TMDBApiClient): Instance of TMDBApiClient.
-            year (int): Year of movie releases to collect. Defaults to 2023.
+            year (int): Year of movie releases to collect.
             output_dir (Optional[str]): Directory to save collected data.
         """
         self.api_client = api_client
@@ -111,7 +111,7 @@ class MovieDataCollector:
         batches_to_filter = []
 
         # Use tqdm for the progress bar
-        with tqdm(total=total_pages, desc="Fetching movies", ncols=80, dynamic_ncols=True) as pbar:
+        with tqdm(total=total_pages, desc=f"Fetching movies for {self.year}", ncols=80, dynamic_ncols=True) as pbar:
             while page <= total_pages:
                 params['page'] = page
                 data = self.api_client.make_request("/discover/movie", params)
@@ -175,33 +175,41 @@ class MovieDataCollector:
         with open(output_file_path, 'w', encoding='utf-8') as f:
             json.dump(batch_data, f, indent=2, ensure_ascii=False)
         # Use tqdm.write to print without disrupting the progress bar
-        tqdm.write(f"Saved batch {batch_number} with {len(batch_data)} movies.")
+        tqdm.write(f"Saved batch {batch_number} for year {self.year} with {len(batch_data)} movies.")
         # Also log the event
-        logger.info(f"Saved batch {batch_number} with {len(batch_data)} movies.")
+        logger.info(f"Saved batch {batch_number} for year {self.year} with {len(batch_data)} movies.")
         return output_file_name  # Return the file name for filtering
 
     def trigger_filtering(self, batch_file_names):
-        filter_thread = threading.Thread(target=run_filtering, args=(batch_file_names,))
+        filter_thread = threading.Thread(target=run_filtering, args=(batch_file_names, self.year))
         filter_thread.start()
 
-def run_filtering(batch_file_names):
+def run_filtering(batch_file_names, year):
     from filter_movie_data import DataFilter  # Import the filtering module
 
-    input_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "movie_data", str(2023))
-    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "filtered_data", str(2023))
+    input_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "movie_data", str(year))
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "filtered_data", str(year))
 
     data_filter = DataFilter(input_dir, output_dir)
     data_filter.process_batch_files(batch_file_names)
 
 if __name__ == "__main__":
-    # Instantiate the API client and data collector
+    # Instantiate the API client
     api_client = TMDBApiClient(api_key)
-    collector = MovieDataCollector(api_client, year=2023)
 
-    try:
-        # Collect and save movie data
-        collector.get_movies_by_year_batch(batch_size=1000)
-    except Exception as e:
-        logger.error(f"An error occurred during data collection: {e}")
-        # Use tqdm.write to print the error without disrupting the progress bar
-        tqdm.write(f"An error occurred during data collection: {e}")
+    # Years to process
+    years_to_process = list(range(2000, 2023))  # 2000 to 2022 inclusive
+
+    # Exclude 2023 since it's already completed
+    years_to_process = [year for year in years_to_process if year != 2023]
+
+    # Loop through each year and collect data
+    for year in years_to_process:
+        collector = MovieDataCollector(api_client, year=year)
+        try:
+            # Collect and save movie data for the year
+            collector.get_movies_by_year_batch(batch_size=1000)
+        except Exception as e:
+            logger.error(f"An error occurred during data collection for year {year}: {e}")
+            # Use tqdm.write to print the error without disrupting the progress bar
+            tqdm.write(f"An error occurred during data collection for year {year}: {e}")
