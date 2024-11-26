@@ -1,0 +1,73 @@
+{
+  "cast": [
+    {
+      "name": "Tom Arnold",
+      "character": "Brady"
+    },
+    {
+      "name": "Tania Fox",
+      "character": "Lana"
+    },
+    {
+      "name": "Jolene Anderson",
+      "character": "Agnes"
+    },
+    {
+      "name": "Andrew Rogers",
+      "character": "Captain Watts"
+    },
+    {
+      "name": "Mica Javier",
+      "character": "Mila"
+    },
+    {
+      "name": "Chad Ridgely",
+      "character": "Wilks"
+    },
+    {
+      "name": "Anthony Jensen",
+      "character": "Gen Palmer"
+    },
+    {
+      "name": "Mark Justice",
+      "character": "Lt Ryan"
+    },
+    {
+      "name": "Jessica DeBonville",
+      "character": "Connor"
+    },
+    {
+      "name": "Charlotte Bjornbak",
+      "character": "Lt May"
+    },
+    {
+      "name": "Matthew Gademske",
+      "character": "Trevor"
+    },
+    {
+      "name": "Geena Alexandra",
+      "character": "Reena"
+    },
+    {
+      "name": "Todd Karner",
+      "character": "Mark"
+    },
+    {
+      "name": "Desaré Foster",
+      "character": "Juniper"
+    },
+    {
+      "name": "Christopher Michael Carney",
+      "character": "Prof Lang"
+    },
+    {
+      "name": "Angel Mendoza",
+      "character": "Prof Derek"
+    }
+  ],
+  "director": [
+    {
+      "name": "Michael Su"
+    }
+  ]
+}

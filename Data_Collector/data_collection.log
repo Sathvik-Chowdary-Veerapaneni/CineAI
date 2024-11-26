@@ -1,0 +1,264 @@
+2024-11-23 12:00:25,927 - INFO - Saved batch 1 with 1000 movies.
+2024-11-23 12:03:59,975 - INFO - Saved batch 2 with 1000 movies.
+2024-11-23 13:53:36,420 - INFO - Saved batch 1 with 1000 movies.
+2024-11-23 13:56:26,500 - INFO - Saved batch 2 with 1000 movies.
+2024-11-23 13:59:42,931 - INFO - Saved batch 3 with 1000 movies.
+2024-11-23 14:03:05,512 - INFO - Saved batch 4 with 1000 movies.
+2024-11-23 14:06:32,089 - INFO - Saved batch 5 with 1000 movies.
+2024-11-23 14:10:22,630 - INFO - Saved batch 6 with 1000 movies.
+2024-11-23 14:13:37,883 - INFO - Saved batch 7 with 1000 movies.
+2024-11-23 14:16:52,627 - INFO - Saved batch 8 with 1000 movies.
+2024-11-23 14:20:15,580 - INFO - Saved batch 9 with 1000 movies.
+2024-11-23 14:21:42,307 - ERROR - Error fetching /movie/1198594/credits: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/1198594/credits
+2024-11-23 14:21:43,088 - ERROR - Error fetching /movie/1198594/watch/providers: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/1198594/watch/providers
+2024-11-23 14:23:38,467 - INFO - Saved batch 10 with 1000 movies.
+2024-11-23 14:23:38,985 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2023&page=501&sort_by=popularity.desc
+2024-11-23 14:37:23,784 - INFO - Saved batch 1 for year 2000 with 1000 movies.
+2024-11-23 14:41:11,336 - INFO - Saved batch 2 for year 2000 with 1000 movies.
+2024-11-23 14:44:31,831 - INFO - Saved batch 3 for year 2000 with 1000 movies.
+2024-11-23 14:48:04,954 - INFO - Saved batch 4 for year 2000 with 1000 movies.
+2024-11-23 14:52:09,863 - INFO - Saved batch 5 for year 2000 with 1000 movies.
+2024-11-23 14:55:38,066 - INFO - Saved batch 6 for year 2000 with 1000 movies.
+2024-11-23 14:59:11,909 - INFO - Saved batch 7 for year 2000 with 1000 movies.
+2024-11-23 15:02:15,005 - INFO - Saved batch 8 for year 2000 with 569 movies.
+2024-11-23 15:05:48,543 - INFO - Saved batch 1 for year 2001 with 1000 movies.
+2024-11-23 15:09:18,766 - INFO - Saved batch 2 for year 2001 with 1000 movies.
+2024-11-23 15:13:15,670 - INFO - Saved batch 3 for year 2001 with 1000 movies.
+2024-11-23 15:16:48,499 - INFO - Saved batch 4 for year 2001 with 1000 movies.
+2024-11-23 15:20:16,114 - INFO - Saved batch 5 for year 2001 with 1000 movies.
+2024-11-23 15:24:15,320 - INFO - Saved batch 6 for year 2001 with 1000 movies.
+2024-11-23 15:27:39,945 - INFO - Saved batch 7 for year 2001 with 1000 movies.
+2024-11-23 15:31:10,301 - INFO - Saved batch 8 for year 2001 with 1000 movies.
+2024-11-23 15:32:01,273 - INFO - Saved batch 9 for year 2001 with 255 movies.
+2024-11-23 15:35:44,495 - INFO - Saved batch 1 for year 2002 with 1000 movies.
+2024-11-23 15:39:10,271 - INFO - Saved batch 2 for year 2002 with 1000 movies.
+2024-11-23 15:42:36,520 - INFO - Saved batch 3 for year 2002 with 1000 movies.
+2024-11-23 15:46:41,810 - INFO - Saved batch 4 for year 2002 with 1000 movies.
+2024-11-23 15:50:13,685 - INFO - Saved batch 5 for year 2002 with 1000 movies.
+2024-11-23 15:53:37,300 - INFO - Saved batch 6 for year 2002 with 1000 movies.
+2024-11-23 15:57:16,924 - INFO - Saved batch 7 for year 2002 with 1000 movies.
+2024-11-23 16:00:41,366 - INFO - Saved batch 8 for year 2002 with 1000 movies.
+2024-11-23 16:04:12,411 - INFO - Saved batch 9 for year 2002 with 1000 movies.
+2024-11-23 16:04:18,555 - INFO - Saved batch 10 for year 2002 with 28 movies.
+2024-11-23 16:08:09,330 - INFO - Saved batch 1 for year 2003 with 1000 movies.
+2024-11-23 16:11:28,344 - INFO - Saved batch 2 for year 2003 with 1000 movies.
+2024-11-23 16:14:57,189 - INFO - Saved batch 3 for year 2003 with 1000 movies.
+2024-11-23 16:18:54,148 - INFO - Saved batch 4 for year 2003 with 1000 movies.
+2024-11-23 16:22:16,392 - INFO - Saved batch 5 for year 2003 with 1000 movies.
+2024-11-23 16:25:36,736 - INFO - Saved batch 6 for year 2003 with 1000 movies.
+2024-11-23 16:29:32,269 - INFO - Saved batch 7 for year 2003 with 1000 movies.
+2024-11-23 16:32:56,781 - INFO - Saved batch 8 for year 2003 with 1000 movies.
+2024-11-23 16:36:22,742 - INFO - Saved batch 9 for year 2003 with 1000 movies.
+2024-11-23 16:40:30,678 - INFO - Saved batch 10 for year 2003 with 1000 movies.
+2024-11-23 16:40:31,059 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2003&page=501&sort_by=popularity.desc
+2024-11-23 16:44:00,000 - INFO - Saved batch 1 for year 2004 with 1000 movies.
+2024-11-23 16:47:36,250 - INFO - Saved batch 2 for year 2004 with 1000 movies.
+2024-11-23 16:51:01,297 - INFO - Saved batch 3 for year 2004 with 1000 movies.
+2024-11-23 16:54:26,506 - INFO - Saved batch 4 for year 2004 with 1000 movies.
+2024-11-23 16:58:13,899 - INFO - Saved batch 5 for year 2004 with 1000 movies.
+2024-11-23 17:01:34,160 - INFO - Saved batch 6 for year 2004 with 1000 movies.
+2024-11-23 17:04:58,611 - INFO - Saved batch 7 for year 2004 with 1000 movies.
+2024-11-23 17:08:41,135 - INFO - Saved batch 8 for year 2004 with 1000 movies.
+2024-11-23 17:12:06,162 - INFO - Saved batch 9 for year 2004 with 1000 movies.
+2024-11-23 17:15:25,393 - INFO - Saved batch 10 for year 2004 with 1000 movies.
+2024-11-23 17:15:26,018 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2004&page=501&sort_by=popularity.desc
+2024-11-23 17:20:00,225 - INFO - Saved batch 1 for year 2005 with 1000 movies.
+2024-11-23 17:23:46,460 - INFO - Saved batch 2 for year 2005 with 1000 movies.
+2024-11-23 17:27:15,607 - INFO - Saved batch 3 for year 2005 with 1000 movies.
+2024-11-23 17:30:58,559 - INFO - Saved batch 4 for year 2005 with 1000 movies.
+2024-11-23 17:34:24,862 - INFO - Saved batch 5 for year 2005 with 1000 movies.
+2024-11-23 17:37:51,077 - INFO - Saved batch 6 for year 2005 with 1000 movies.
+2024-11-23 17:42:38,220 - INFO - Saved batch 7 for year 2005 with 1000 movies.
+2024-11-23 17:46:12,726 - INFO - Saved batch 8 for year 2005 with 1000 movies.
+2024-11-23 17:49:42,973 - INFO - Saved batch 9 for year 2005 with 1000 movies.
+2024-11-23 17:57:10,727 - INFO - Saved batch 10 for year 2005 with 1000 movies.
+2024-11-23 17:57:11,094 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2005&page=501&sort_by=popularity.desc
+2024-11-23 18:00:55,980 - INFO - Saved batch 1 for year 2006 with 1000 movies.
+2024-11-23 18:04:25,830 - INFO - Saved batch 2 for year 2006 with 1000 movies.
+2024-11-23 18:07:59,040 - INFO - Saved batch 3 for year 2006 with 1000 movies.
+2024-11-23 18:11:28,176 - INFO - Saved batch 4 for year 2006 with 1000 movies.
+2024-11-23 18:15:06,958 - INFO - Saved batch 5 for year 2006 with 1000 movies.
+2024-11-23 18:18:45,468 - INFO - Saved batch 6 for year 2006 with 1000 movies.
+2024-11-23 18:22:32,462 - INFO - Saved batch 7 for year 2006 with 1000 movies.
+2024-11-23 18:26:03,135 - INFO - Saved batch 8 for year 2006 with 1000 movies.
+2024-11-23 18:29:46,266 - INFO - Saved batch 9 for year 2006 with 1000 movies.
+2024-11-23 18:33:24,396 - INFO - Saved batch 10 for year 2006 with 1000 movies.
+2024-11-23 18:33:24,796 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2006&page=501&sort_by=popularity.desc
+2024-11-23 18:37:11,420 - INFO - Saved batch 1 for year 2007 with 1000 movies.
+2024-11-23 18:41:02,588 - INFO - Saved batch 2 for year 2007 with 1000 movies.
+2024-11-23 18:44:46,067 - INFO - Saved batch 3 for year 2007 with 1000 movies.
+2024-11-23 18:48:18,250 - INFO - Saved batch 4 for year 2007 with 1000 movies.
+2024-11-23 18:52:10,580 - INFO - Saved batch 5 for year 2007 with 1000 movies.
+2024-11-23 18:55:49,075 - ERROR - Error fetching /movie/238573/recommendations: HTTPSConnectionPool(host='api.themoviedb.org', port=443): Max retries exceeded with url: /3/movie/238573/recommendations (Caused by ResponseError('too many 500 error responses'))
+2024-11-23 18:56:15,655 - INFO - Saved batch 6 for year 2007 with 1000 movies.
+2024-11-23 18:59:57,465 - INFO - Saved batch 7 for year 2007 with 1000 movies.
+2024-11-23 19:04:20,212 - INFO - Saved batch 8 for year 2007 with 1000 movies.
+2024-11-23 19:08:09,576 - INFO - Saved batch 9 for year 2007 with 1000 movies.
+2024-11-23 19:12:22,576 - INFO - Saved batch 10 for year 2007 with 1000 movies.
+2024-11-23 19:12:22,977 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2007&page=501&sort_by=popularity.desc
+2024-11-23 19:15:58,949 - INFO - Saved batch 1 for year 2008 with 1000 movies.
+2024-11-23 19:19:58,877 - INFO - Saved batch 2 for year 2008 with 1000 movies.
+2024-11-23 19:24:14,697 - INFO - Saved batch 3 for year 2008 with 1000 movies.
+2024-11-23 19:28:45,979 - INFO - Saved batch 4 for year 2008 with 1000 movies.
+2024-11-23 19:32:58,864 - INFO - Saved batch 5 for year 2008 with 1000 movies.
+2024-11-23 19:37:30,008 - INFO - Saved batch 6 for year 2008 with 1000 movies.
+2024-11-23 19:42:45,836 - INFO - Saved batch 7 for year 2008 with 1000 movies.
+2024-11-23 19:47:05,044 - INFO - Saved batch 8 for year 2008 with 1000 movies.
+2024-11-23 19:51:25,089 - INFO - Saved batch 9 for year 2008 with 1000 movies.
+2024-11-23 19:55:25,202 - INFO - Saved batch 10 for year 2008 with 1000 movies.
+2024-11-23 19:55:25,602 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2008&page=501&sort_by=popularity.desc
+2024-11-23 20:00:15,539 - INFO - Saved batch 1 for year 2009 with 1000 movies.
+2024-11-23 20:04:57,834 - INFO - Saved batch 2 for year 2009 with 1000 movies.
+2024-11-23 20:09:54,342 - INFO - Saved batch 3 for year 2009 with 1000 movies.
+2024-11-23 20:14:32,190 - INFO - Saved batch 4 for year 2009 with 1000 movies.
+2024-11-23 20:18:42,829 - INFO - Saved batch 5 for year 2009 with 1000 movies.
+2024-11-23 20:24:29,690 - INFO - Saved batch 6 for year 2009 with 1000 movies.
+2024-11-23 20:29:57,474 - INFO - Saved batch 7 for year 2009 with 1000 movies.
+2024-11-23 20:34:57,175 - INFO - Saved batch 8 for year 2009 with 1000 movies.
+2024-11-23 20:39:39,413 - INFO - Saved batch 9 for year 2009 with 1000 movies.
+2024-11-23 20:44:50,523 - INFO - Saved batch 10 for year 2009 with 1000 movies.
+2024-11-23 20:44:51,281 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2009&page=501&sort_by=popularity.desc
+2024-11-23 20:49:53,291 - INFO - Saved batch 1 for year 2010 with 1000 movies.
+2024-11-23 20:55:30,545 - INFO - Saved batch 2 for year 2010 with 1000 movies.
+2024-11-23 20:59:40,090 - INFO - Saved batch 3 for year 2010 with 1000 movies.
+2024-11-23 21:04:57,872 - INFO - Saved batch 4 for year 2010 with 1000 movies.
+2024-11-23 21:09:21,449 - INFO - Saved batch 5 for year 2010 with 1000 movies.
+2024-11-23 21:14:21,621 - INFO - Saved batch 6 for year 2010 with 1000 movies.
+2024-11-23 21:19:03,993 - INFO - Saved batch 7 for year 2010 with 1000 movies.
+2024-11-23 21:23:36,272 - INFO - Saved batch 8 for year 2010 with 1000 movies.
+2024-11-23 21:28:19,940 - INFO - Saved batch 9 for year 2010 with 1000 movies.
+2024-11-23 21:33:44,047 - INFO - Saved batch 10 for year 2010 with 1000 movies.
+2024-11-23 21:33:44,526 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2010&page=501&sort_by=popularity.desc
+2024-11-23 21:39:02,784 - INFO - Saved batch 1 for year 2011 with 1000 movies.
+2024-11-23 21:44:21,414 - INFO - Saved batch 2 for year 2011 with 1000 movies.
+2024-11-23 21:50:19,917 - INFO - Saved batch 3 for year 2011 with 1000 movies.
+2024-11-23 21:56:16,732 - INFO - Saved batch 4 for year 2011 with 1000 movies.
+2024-11-23 22:01:05,591 - INFO - Saved batch 5 for year 2011 with 1000 movies.
+2024-11-23 22:06:45,988 - INFO - Saved batch 6 for year 2011 with 1000 movies.
+2024-11-23 22:12:18,703 - INFO - Saved batch 7 for year 2011 with 1000 movies.
+2024-11-23 22:17:16,582 - INFO - Saved batch 8 for year 2011 with 1000 movies.
+2024-11-23 22:22:13,536 - INFO - Saved batch 9 for year 2011 with 1000 movies.
+2024-11-23 22:27:27,496 - INFO - Saved batch 10 for year 2011 with 1000 movies.
+2024-11-23 22:27:27,947 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2011&page=501&sort_by=popularity.desc
+2024-11-23 22:33:33,420 - INFO - Saved batch 1 for year 2012 with 1000 movies.
+2024-11-23 22:38:26,659 - INFO - Saved batch 2 for year 2012 with 1000 movies.
+2024-11-23 22:43:53,050 - INFO - Saved batch 3 for year 2012 with 1000 movies.
+2024-11-23 22:48:53,608 - INFO - Saved batch 4 for year 2012 with 1000 movies.
+2024-11-23 22:54:12,798 - INFO - Saved batch 5 for year 2012 with 1000 movies.
+2024-11-23 22:59:04,655 - INFO - Saved batch 6 for year 2012 with 1000 movies.
+2024-11-23 23:04:18,325 - INFO - Saved batch 7 for year 2012 with 1000 movies.
+2024-11-23 23:10:27,943 - INFO - Saved batch 8 for year 2012 with 1000 movies.
+2024-11-23 23:17:01,846 - INFO - Saved batch 9 for year 2012 with 1000 movies.
+2024-11-23 23:22:13,975 - INFO - Saved batch 10 for year 2012 with 1000 movies.
+2024-11-23 23:22:14,512 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2012&page=501&sort_by=popularity.desc
+2024-11-23 23:28:19,750 - INFO - Saved batch 1 for year 2013 with 1000 movies.
+2024-11-23 23:35:22,012 - INFO - Saved batch 2 for year 2013 with 1000 movies.
+2024-11-23 23:41:55,365 - INFO - Saved batch 3 for year 2013 with 1000 movies.
+2024-11-23 23:47:20,165 - INFO - Saved batch 4 for year 2013 with 1000 movies.
+2024-11-23 23:53:11,516 - INFO - Saved batch 5 for year 2013 with 1000 movies.
+2024-11-23 23:59:47,806 - INFO - Saved batch 6 for year 2013 with 1000 movies.
+2024-11-24 00:07:09,934 - INFO - Saved batch 7 for year 2013 with 1000 movies.
+2024-11-24 00:12:43,854 - INFO - Saved batch 8 for year 2013 with 1000 movies.
+2024-11-24 00:18:55,690 - INFO - Saved batch 9 for year 2013 with 1000 movies.
+2024-11-24 00:24:54,938 - INFO - Saved batch 10 for year 2013 with 1000 movies.
+2024-11-24 00:24:55,525 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2013&page=501&sort_by=popularity.desc
+2024-11-24 00:30:27,097 - INFO - Saved batch 1 for year 2014 with 1000 movies.
+2024-11-24 00:35:19,124 - INFO - Saved batch 2 for year 2014 with 1000 movies.
+2024-11-24 00:41:56,078 - INFO - Saved batch 3 for year 2014 with 1000 movies.
+2024-11-24 00:48:04,974 - INFO - Saved batch 4 for year 2014 with 1000 movies.
+2024-11-24 00:53:19,057 - INFO - Saved batch 5 for year 2014 with 1000 movies.
+2024-11-24 01:01:13,327 - INFO - Saved batch 6 for year 2014 with 1000 movies.
+2024-11-24 01:07:14,511 - INFO - Saved batch 7 for year 2014 with 1000 movies.
+2024-11-24 01:13:53,459 - INFO - Saved batch 8 for year 2014 with 1000 movies.
+2024-11-24 01:19:52,996 - INFO - Saved batch 9 for year 2014 with 1000 movies.
+2024-11-24 01:26:05,325 - INFO - Saved batch 10 for year 2014 with 1000 movies.
+2024-11-24 01:26:05,807 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2014&page=501&sort_by=popularity.desc
+2024-11-24 01:33:46,205 - INFO - Saved batch 1 for year 2015 with 1000 movies.
+2024-11-24 01:41:48,420 - INFO - Saved batch 2 for year 2015 with 1000 movies.
+2024-11-24 01:49:39,780 - INFO - Saved batch 3 for year 2015 with 1000 movies.
+2024-11-24 01:57:19,005 - INFO - Saved batch 4 for year 2015 with 1000 movies.
+2024-11-24 02:03:52,468 - INFO - Saved batch 5 for year 2015 with 1000 movies.
+2024-11-24 02:10:15,015 - INFO - Saved batch 6 for year 2015 with 1000 movies.
+2024-11-24 02:17:28,803 - INFO - Saved batch 7 for year 2015 with 1000 movies.
+2024-11-24 02:24:36,932 - INFO - Saved batch 8 for year 2015 with 1000 movies.
+2024-11-24 02:34:06,595 - INFO - Saved batch 9 for year 2015 with 1000 movies.
+2024-11-24 02:43:05,311 - INFO - Saved batch 10 for year 2015 with 1000 movies.
+2024-11-24 02:43:05,929 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2015&page=501&sort_by=popularity.desc
+2024-11-24 02:50:16,401 - INFO - Saved batch 1 for year 2016 with 1000 movies.
+2024-11-24 02:58:01,731 - INFO - Saved batch 2 for year 2016 with 1000 movies.
+2024-11-24 03:05:02,099 - INFO - Saved batch 3 for year 2016 with 1000 movies.
+2024-11-24 03:13:15,247 - INFO - Saved batch 4 for year 2016 with 1000 movies.
+2024-11-24 03:20:47,922 - INFO - Saved batch 5 for year 2016 with 1000 movies.
+2024-11-24 03:28:13,226 - INFO - Saved batch 6 for year 2016 with 1000 movies.
+2024-11-24 03:34:50,045 - INFO - Saved batch 7 for year 2016 with 1000 movies.
+2024-11-24 03:43:36,657 - INFO - Saved batch 8 for year 2016 with 1000 movies.
+2024-11-24 03:53:40,169 - INFO - Saved batch 9 for year 2016 with 1000 movies.
+2024-11-24 04:01:06,927 - INFO - Saved batch 10 for year 2016 with 1000 movies.
+2024-11-24 04:01:07,568 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2016&page=501&sort_by=popularity.desc
+2024-11-24 04:10:12,928 - INFO - Saved batch 1 for year 2017 with 1000 movies.
+2024-11-24 04:16:36,191 - INFO - Saved batch 2 for year 2017 with 1000 movies.
+2024-11-24 04:22:48,504 - INFO - Saved batch 3 for year 2017 with 1000 movies.
+2024-11-24 04:28:43,543 - INFO - Saved batch 4 for year 2017 with 1000 movies.
+2024-11-24 04:35:44,162 - INFO - Saved batch 5 for year 2017 with 1000 movies.
+2024-11-24 04:43:18,852 - INFO - Saved batch 6 for year 2017 with 1000 movies.
+2024-11-24 04:51:21,540 - INFO - Saved batch 7 for year 2017 with 1000 movies.
+2024-11-24 04:57:42,787 - INFO - Saved batch 8 for year 2017 with 1000 movies.
+2024-11-24 05:04:41,563 - INFO - Saved batch 9 for year 2017 with 1000 movies.
+2024-11-24 05:09:03,835 - ERROR - Error fetching /movie/392532/recommendations: HTTPSConnectionPool(host='api.themoviedb.org', port=443): Max retries exceeded with url: /3/movie/392532/recommendations (Caused by ResponseError('too many 500 error responses'))
+2024-11-24 05:11:29,985 - INFO - Saved batch 10 for year 2017 with 1000 movies.
+2024-11-24 05:11:30,428 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2017&page=501&sort_by=popularity.desc
+2024-11-24 05:18:26,791 - INFO - Saved batch 1 for year 2018 with 1000 movies.
+2024-11-24 05:25:13,751 - INFO - Saved batch 2 for year 2018 with 1000 movies.
+2024-11-24 05:32:09,068 - INFO - Saved batch 3 for year 2018 with 1000 movies.
+2024-11-24 05:38:13,452 - INFO - Saved batch 4 for year 2018 with 1000 movies.
+2024-11-24 05:44:17,214 - INFO - Saved batch 5 for year 2018 with 1000 movies.
+2024-11-24 05:51:45,837 - INFO - Saved batch 6 for year 2018 with 1000 movies.
+2024-11-24 05:57:59,526 - INFO - Saved batch 7 for year 2018 with 1000 movies.
+2024-11-24 06:04:56,198 - INFO - Saved batch 8 for year 2018 with 1000 movies.
+2024-11-24 06:12:30,769 - INFO - Saved batch 9 for year 2018 with 1000 movies.
+2024-11-24 06:18:54,149 - INFO - Saved batch 10 for year 2018 with 1000 movies.
+2024-11-24 06:18:54,859 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2018&page=501&sort_by=popularity.desc
+2024-11-24 06:24:22,399 - INFO - Saved batch 1 for year 2019 with 1000 movies.
+2024-11-24 06:31:36,439 - INFO - Saved batch 2 for year 2019 with 1000 movies.
+2024-11-24 06:37:50,887 - INFO - Saved batch 3 for year 2019 with 1000 movies.
+2024-11-24 06:44:50,947 - INFO - Saved batch 4 for year 2019 with 1000 movies.
+2024-11-24 06:51:39,991 - INFO - Saved batch 5 for year 2019 with 1000 movies.
+2024-11-24 06:59:28,506 - INFO - Saved batch 6 for year 2019 with 1000 movies.
+2024-11-24 07:07:07,023 - INFO - Saved batch 7 for year 2019 with 1000 movies.
+2024-11-24 07:13:05,975 - INFO - Saved batch 8 for year 2019 with 1000 movies.
+2024-11-24 07:19:42,222 - INFO - Saved batch 9 for year 2019 with 1000 movies.
+2024-11-24 07:27:46,310 - INFO - Saved batch 10 for year 2019 with 1000 movies.
+2024-11-24 07:27:46,796 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2019&page=501&sort_by=popularity.desc
+2024-11-24 07:35:30,879 - INFO - Saved batch 1 for year 2020 with 1000 movies.
+2024-11-24 07:42:30,756 - INFO - Saved batch 2 for year 2020 with 1000 movies.
+2024-11-24 07:49:24,196 - INFO - Saved batch 3 for year 2020 with 1000 movies.
+2024-11-24 07:58:23,706 - INFO - Saved batch 4 for year 2020 with 1000 movies.
+2024-11-24 08:06:22,184 - INFO - Saved batch 5 for year 2020 with 1000 movies.
+2024-11-24 08:13:19,790 - INFO - Saved batch 6 for year 2020 with 1000 movies.
+2024-11-24 08:20:05,304 - INFO - Saved batch 7 for year 2020 with 1000 movies.
+2024-11-24 08:26:46,420 - INFO - Saved batch 8 for year 2020 with 1000 movies.
+2024-11-24 08:34:22,392 - INFO - Saved batch 9 for year 2020 with 1000 movies.
+2024-11-24 08:40:41,653 - INFO - Saved batch 10 for year 2020 with 1000 movies.
+2024-11-24 08:40:42,270 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2020&page=501&sort_by=popularity.desc
+2024-11-24 08:48:17,899 - INFO - Saved batch 1 for year 2021 with 1000 movies.
+2024-11-24 08:56:08,733 - INFO - Saved batch 2 for year 2021 with 1000 movies.
+2024-11-24 09:04:11,905 - INFO - Saved batch 3 for year 2021 with 1000 movies.
+2024-11-24 09:11:05,702 - INFO - Saved batch 4 for year 2021 with 1000 movies.
+2024-11-24 09:18:05,735 - INFO - Saved batch 5 for year 2021 with 1000 movies.
+2024-11-24 09:25:20,059 - INFO - Saved batch 6 for year 2021 with 1000 movies.
+2024-11-24 09:33:11,814 - INFO - Saved batch 7 for year 2021 with 1000 movies.
+2024-11-24 09:40:10,464 - INFO - Saved batch 8 for year 2021 with 1000 movies.
+2024-11-24 09:47:44,485 - INFO - Saved batch 9 for year 2021 with 1000 movies.
+2024-11-24 09:53:41,147 - INFO - Saved batch 10 for year 2021 with 1000 movies.
+2024-11-24 09:53:41,839 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2021&page=501&sort_by=popularity.desc
+2024-11-24 10:00:04,468 - INFO - Saved batch 1 for year 2022 with 1000 movies.
+2024-11-24 10:06:31,036 - INFO - Saved batch 2 for year 2022 with 1000 movies.
+2024-11-24 10:12:36,551 - INFO - Saved batch 3 for year 2022 with 1000 movies.
+2024-11-24 10:17:43,946 - INFO - Saved batch 4 for year 2022 with 1000 movies.
+2024-11-24 10:24:30,496 - INFO - Saved batch 5 for year 2022 with 1000 movies.
+2024-11-24 10:30:25,968 - INFO - Saved batch 6 for year 2022 with 1000 movies.
+2024-11-24 10:34:49,052 - INFO - Saved batch 7 for year 2022 with 1000 movies.
+2024-11-24 10:41:55,680 - INFO - Saved batch 8 for year 2022 with 1000 movies.
+2024-11-24 10:50:15,297 - INFO - Saved batch 9 for year 2022 with 1000 movies.
+2024-11-24 10:57:29,334 - INFO - Saved batch 10 for year 2022 with 1000 movies.
+2024-11-24 10:57:29,757 - ERROR - Error fetching /discover/movie: 400 Client Error: Bad Request for url: https://api.themoviedb.org/3/discover/movie?language=en-US&primary_release_year=2022&page=501&sort_by=popularity.desc
