@@ -1,0 +1,77 @@
+{
+  "cast": [
+    {
+      "name": "Stephen Fry",
+      "character": "Sir Simon de Canterville (voice)"
+    },
+    {
+      "name": "Hugh Laurie",
+      "character": "Grim Reaper / Gardener / Swordsman / Monster / Old Duke (voice)"
+    },
+    {
+      "name": "Freddie Highmore",
+      "character": "Henry Duke of Cheshire (voice)"
+    },
+    {
+      "name": "Emily Carey",
+      "character": "Virginia Otis (voice)"
+    },
+    {
+      "name": "Imelda Staunton",
+      "character": "Mrs Umney (voice)"
+    },
+    {
+      "name": "Meera Syal",
+      "character": "Lucretia Otis (voice)"
+    },
+    {
+      "name": "David Harewood",
+      "character": "Hiram Otis (voice)"
+    },
+    {
+      "name": "Miranda Hart",
+      "character": "Algernean Van Finchley (voice)"
+    },
+    {
+      "name": "Toby Jones",
+      "character": "The Reverend Chasuble (voice)"
+    },
+    {
+      "name": "Jakey Schiff",
+      "character": "Louis Otis (voice)"
+    },
+    {
+      "name": "Bennett Miller",
+      "character": "Kent Otis (voice)"
+    },
+    {
+      "name": "Bill Lobley",
+      "character": "Lord Monroe (voice)"
+    },
+    {
+      "name": "Elizabeth Sankey",
+      "character": "Lady Eleanor de Canterville / Lady Erlynne / Guests (voice)"
+    },
+    {
+      "name": "Keiron Self",
+      "character": "Professor Borsakov / Guests (voice)"
+    },
+    {
+      "name": "Giles New",
+      "character": "The Colonel / Guests (voice)"
+    },
+    {
+      "name": "Lynne Seymour",
+      "character": "Mrs Borsakov / Guests (voice)"
+    },
+    {
+      "name": "Georgia Small",
+      "character": "Marjorie Fairfax / Guests (voice)"
+    }
+  ],
+  "director": [
+    {
+      "name": "Kim Burdon"
+    }
+  ]
+}

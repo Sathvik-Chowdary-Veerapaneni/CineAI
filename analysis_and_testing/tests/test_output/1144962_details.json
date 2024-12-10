@@ -1,0 +1,15 @@
+{
+  "adult": false,
+  "genres": [
+    {
+      "name": "Action"
+    },
+    {
+      "name": "Science Fiction"
+    }
+  ],
+  "original_title": "Transmorphers: Mech Beasts",
+  "original_language": "en",
+  "popularity": 309.88,
+  "release_date": "2023-06-09"
+}
