@@ -15,3 +15,5 @@ venv
 .DS_Store
 .vscode
 
+src/embeddings/embeddings_logs
+
