@@ -1,3 +1,20 @@
-chromadb
-langchain
+# Core MPS-Enabled PyTorch
+torch
+torchvision
+torchaudio
+
+# Data Handling
+pandas
+
+# RAG / NLP / AI-Related
 sentence-transformers
+qdrant-client
+ray
+
+# Web and API
+fastapi
+uvicorn
+
+# Jupyter
+jupyterlab
+ipykernel

@@ -1,6 +1,7 @@
 venv
 .env
 .vscode
+cineai_mps
 
 # Python cache files
 __pycache__/
